@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:10-alpine
 LABEL maintainer="snadn <snadn@snadn.cn>"
 
 RUN apk update \
