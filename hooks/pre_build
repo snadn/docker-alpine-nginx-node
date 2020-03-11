@@ -1,6 +1,10 @@
 #!/bin/bash
 
 export DOCKER_CLI_EXPERIMENTAL=enabled
+
+env
+docker --version
+
 docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 docker buildx ls | grep mybuilder || docker buildx create --name mybuilder
 docker buildx use mybuilder
